@@ -32,7 +32,7 @@ const inspirationData = {
     }
 };
 
-// Dados dos planos (fallback caso não consiga carregar do banco)
+// Dados dos planos (fallback caso não consiga carregar do banco )
 const planosDefault = [
     {
         id: 1,
@@ -48,8 +48,8 @@ const planosDefault = [
             'Alterações em tempo real'
         ],
         manutencao_preco: 150.00,
-        whatsapp_link: 'https://wa.link/yl761t',
-        whatsapp_message: encodeURIComponent('Olá! Tenho interesse no plano *Site Básico com Domínio Gratuito* por R$ 899,00. Gostaria de mais informações!')
+        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_message: 'Olá! Tenho interesse no plano *Site Básico com Domínio Gratuito* por R$ 899,00. Gostaria de mais informações!'
     },
     {
         id: 2,
@@ -66,8 +66,8 @@ const planosDefault = [
             'Alterar cores e promoções'
         ],
         manutencao_preco: 200.00,
-        whatsapp_link: 'https://wa.link/yl761t',
-        whatsapp_message: encodeURIComponent('Olá! Tenho interesse no plano *Site + Hospedagem Profissional* por R$ 1.100,00. Gostaria de mais informações!')
+        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_message: 'Olá! Tenho interesse no plano *Site + Hospedagem Profissional* por R$ 1.100,00. Gostaria de mais informações!'
     },
     {
         id: 3,
@@ -83,8 +83,8 @@ const planosDefault = [
             'Consultoria digital'
         ],
         manutencao_preco: 250.00,
-        whatsapp_link: 'https://wa.link/yl761t',
-        whatsapp_message: encodeURIComponent('Olá! Tenho interesse no plano *Site + Hospedagem + Instagram + E-book* por R$ 1.500,00. Gostaria de mais informações!')
+        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_message: 'Olá! Tenho interesse no plano *Site + Hospedagem + Instagram + E-book* por R$ 1.500,00. Gostaria de mais informações!'
     },
     {
         id: 4,
@@ -100,8 +100,8 @@ const planosDefault = [
             'Consultoria completa'
         ],
         manutencao_preco: 0.00,
-        whatsapp_link: 'https://wa.link/yl761t',
-        whatsapp_message: encodeURIComponent('Olá! Tenho interesse no plano *Personalizado*. Gostaria de discutir minha necessidade específica!')
+        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_message: 'Olá! Tenho interesse no plano *Personalizado*. Gostaria de discutir minha necessidade específica!'
     }
 ];
 
@@ -109,7 +109,7 @@ const planosDefault = [
 let planosData = null;
 
 // Função para carregar planos do banco de dados
-async function carregarPlanos() {
+async function carregarPlanos( ) {
     try {
         // Tentar carregar do banco de dados primeiro
         const response = await fetch('api/planos.php');
@@ -140,11 +140,11 @@ function usarDadosPadrao() {
     planosData = {
         success: true,
         planos: planosDefault,
-        whatsapp_url: 'https://wa.link/yl761t'
+        whatsapp_url: 'https://wa.me/5588998581489'
     };
     
-    renderizarPlanos(planosDefault);
-    configurarLinksWhatsApp('https://wa.link/yl761t');
+    renderizarPlanos(planosDefault );
+    configurarLinksWhatsApp('https://wa.me/5588998581489' );
     console.log('✅ Planos carregados com dados padrão');
 }
 
@@ -186,7 +186,7 @@ function renderizarPlanos(planos) {
                     </div>
                 ` : ''}
                 
-                <a href="${plano.whatsapp_link}?text=${plano.whatsapp_message}" 
+                <a href="${plano.whatsapp_link}?text=${encodeURIComponent(plano.whatsapp_message)}" 
                    target="_blank" 
                    class="plano-button ${isPersonalizado ? 'personalizado' : ''}">
                     ${isPersonalizado ? 'Solicitar Orçamento' : 'Escolher Plano'}
@@ -227,10 +227,12 @@ function formatarPreco(preco) {
 // Função para configurar links do WhatsApp
 function configurarLinksWhatsApp(whatsappUrl) {
     const links = ['whatsapp-header', 'whatsapp-cta', 'whatsapp-footer'];
+    const mensagemGeral = 'Olá! Visitei o site da Mivora Digital e gostaria de mais informações sobre os serviços!';
+    
     links.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
-            element.href = whatsappUrl;
+            element.href = `${whatsappUrl}?text=${encodeURIComponent(mensagemGeral)}`;
         }
     });
 }
@@ -504,7 +506,7 @@ function isRunningOnServer() {
 }
 
 // Inicializar todas as funcionalidades quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function( ) {
     // Adicionar estilos de animação
     addAnimationStyles();
     
