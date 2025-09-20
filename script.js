@@ -54,8 +54,8 @@ const planosDefault = [
     {
         id: 2,
         nome: 'Site + Hospedagem Profissional',
-        preco_original: 1500.00,
-        preco_promocional: 1100.00,
+        preco_original: 1800.00,
+        preco_promocional: 1500.00,
         descricao: 'Tudo do Plano 1 com painel administrativo avançado e hospedagem profissional.',
         recursos: [
             'Tudo do Plano 1',
@@ -73,7 +73,7 @@ const planosDefault = [
         id: 3,
         nome: 'Site + Hospedagem + Instagram + E-book',
         preco_original: 2000.00,
-        preco_promocional: 1500.00,
+        preco_promocional: 1700.00,
         descricao: 'Tudo do Plano 2 com organização do Instagram e E-books exclusivos de vendas.',
         recursos: [
             'Tudo do Plano 2',
