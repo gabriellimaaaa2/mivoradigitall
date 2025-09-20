@@ -104,7 +104,8 @@ const planosDefault = [
         whatsapp_message: 'Olá! Tenho interesse no plano *Personalizado*. Gostaria de discutir minha necessidade específica!'
     },
 
-{
+
+    {
         id: 5,
         nome: 'E-book Guia Exclusivo para Lojistas',
         preco_original: 199.90,
@@ -435,36 +436,7 @@ function initRippleEffect() {
     });
 }
 
-// Contador de visitantes (simulado)
-function initVisitorCounter() {
-    const counter = document.createElement('div');
-    counter.className = 'visitor-counter';
-    counter.innerHTML = `
-        <div style="
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--bg-tertiary);
-            color: var(--text-secondary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            border: 1px solid var(--border-color);
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        ">
-            👥 ${Math.floor(Math.random() * 50) + 100} pessoas online
-        </div>
-    `;
-    
-    document.body.appendChild(counter);
-    
-    // Atualizar contador periodicamente
-    setInterval(() => {
-        const count = Math.floor(Math.random() * 50) + 100;
-        counter.querySelector('div').innerHTML = `👥 ${count} pessoas online`;
-    }, 30000);
-}
+
 
 // Adicionar CSS para animações
 function addAnimationStyles() {
