@@ -102,6 +102,24 @@ const planosDefault = [
         manutencao_preco: 0.00,
         whatsapp_link: 'https://wa.me/5585998564357',
         whatsapp_message: 'Olá! Tenho interesse no plano *Personalizado*. Gostaria de discutir minha necessidade específica!'
+    },
+
+{
+        id: 5,
+        nome: 'E-book Guia Exclusivo para Lojistas',
+        preco_original: 199.90,
+        preco_promocional: 97.99,
+        descricao: 'Guia Premium para lojistas, Estrategias praticas e diretas',
+        recursos: [
+            'Dicas práticas para aumentar suas vendas',
+            'Estratégias que realmente funcionam no digital',
+            'Passo a passo para destacar sua marca online',
+            'Conteúdo direto e fácil de aplicar',
+            
+        ],
+        manutencao_preco: 0.00,
+        whatsapp_link: 'https://wa.me/5585998564357',
+        whatsapp_message: 'Olá! Tenho interesse no *Guia Premium para logistas!*. Gostaria de ter mais informações!'
     }
 ];
 
