@@ -107,7 +107,7 @@ const planosDefault = [
 
     {
         id: 5,
-        nome: 'E-book Guia Exclusivo para Lojistas',
+        nome: 'E-book Guia Exclusivo para Lojistas (EM PROMOÇÃO)',
         preco_original: 199.90,
         preco_promocional: 97.99,
         descricao: 'Guia Premium para lojistas, Estrategias praticas e diretas',
