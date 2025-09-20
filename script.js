@@ -48,7 +48,7 @@ const planosDefault = [
             'Alterações em tempo real'
         ],
         manutencao_preco: 150.00,
-        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_link: 'https://wa.me/5585998564357',
         whatsapp_message: 'Olá! Tenho interesse no plano *Site Básico com Domínio Gratuito* por R$ 899,00. Gostaria de mais informações!'
     },
     {
@@ -66,7 +66,7 @@ const planosDefault = [
             'Alterar cores e promoções'
         ],
         manutencao_preco: 200.00,
-        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_link: 'https://wa.me/5585998564357',
         whatsapp_message: 'Olá! Tenho interesse no plano *Site + Hospedagem Profissional* por R$ 1.100,00. Gostaria de mais informações!'
     },
     {
@@ -83,7 +83,7 @@ const planosDefault = [
             'Consultoria digital'
         ],
         manutencao_preco: 250.00,
-        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_link: 'https://wa.me/5585998564357',
         whatsapp_message: 'Olá! Tenho interesse no plano *Site + Hospedagem + Instagram + E-book* por R$ 1.500,00. Gostaria de mais informações!'
     },
     {
@@ -100,7 +100,7 @@ const planosDefault = [
             'Consultoria completa'
         ],
         manutencao_preco: 0.00,
-        whatsapp_link: 'https://wa.me/5588998581489',
+        whatsapp_link: 'https://wa.me/5585998564357',
         whatsapp_message: 'Olá! Tenho interesse no plano *Personalizado*. Gostaria de discutir minha necessidade específica!'
     }
 ];
@@ -140,11 +140,11 @@ function usarDadosPadrao() {
     planosData = {
         success: true,
         planos: planosDefault,
-        whatsapp_url: 'https://wa.me/5588998581489'
+        whatsapp_url: 'https://wa.me/5585998564357'
     };
     
     renderizarPlanos(planosDefault );
-    configurarLinksWhatsApp('https://wa.me/5588998581489' );
+    configurarLinksWhatsApp('https://wa.me/5585998564357' );
     console.log('✅ Planos carregados com dados padrão');
 }
 
